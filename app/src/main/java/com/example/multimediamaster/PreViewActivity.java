@@ -12,9 +12,11 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.util.Log;
+import android.view.Surface;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.Toast;
@@ -82,6 +84,7 @@ public class PreViewActivity extends AppCompatActivity implements AutoPermission
         @Override
         public void surfaceCreated(@NonNull SurfaceHolder surfaceHolder) {
             camera = Camera.open(); // 카메라 객체 참조
+            setCameraOri();
 
             try {
                 camera.setPreviewDisplay(holder); // 카메라 객체에 이 서피스 뷰를 미리보기 화면으로 사용
@@ -109,6 +112,36 @@ public class PreViewActivity extends AppCompatActivity implements AutoPermission
             } else {
                 return false;
             }
+        }
+        public void setCameraOri() {
+            if(camera == null) {
+                return;
+            }
+            /*
+            Camera.CameraInfo info = new Camera.CameraInfo();
+            Camera.getCameraInfo(0, info);
+
+            WindowManager manager = (WindowManager) getSystemService(Context.WINDOW_SERVICE);
+            int rotation = manager.getDefaultDisplay().getRotation(); // 회전 정보 확인
+
+            int degrees = 0;
+
+            switch (rotation) {
+                case Surface.ROTATION_0 : degrees = 0; break;
+                case Surface.ROTATION_90 : degrees = 90; break;
+                case Surface.ROTATION_180 : degrees = 180; break;
+                case Surface.ROTATION_270 : degrees = 270; break;
+            }
+
+            int result;
+            if(info.facing == Camera.CameraInfo.CAMERA_FACING_FRONT) {
+                result = (info.orientation + degrees) % 360;
+                result = (360 - result) % 360;
+            } else {
+                result = (info.orientation - degrees + 360) % 360;
+            } */
+
+            camera.setDisplayOrientation(90);
         }
     }
 
