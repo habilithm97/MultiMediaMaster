@@ -10,16 +10,9 @@
         android:layout_height="wrap_content"
         android:text="사진 촬영" />
 
-    <Button
-        android:id="@+id/btn2"
+    <FrameLayout
+        android:id="@+id/previewFrame"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="카메라 미리보기 액티비티로 이동하기" />
-
-    <ImageView
-        android:id="@+id/img"
-        android:layout_width="match_parent"
-        android:layout_height="504dp"
-        android:background="@drawable/image"/>
+        android:layout_height="match_parent" />
 
 </LinearLayout>

@@ -3,6 +3,7 @@ package com.example.multimediamaster;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.ViewUtils;
 import androidx.core.content.FileProvider;
 
 import android.content.Intent;
@@ -35,6 +36,15 @@ public class MainActivity extends AppCompatActivity implements AutoPermissionsLi
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Button btn2 = (Button)findViewById(R.id.btn2);
+        btn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), PreViewActivity.class);
+                startActivity(intent);
+            }
+        });
 
         AutoPermissions.Companion.loadAllPermissions(this, 101);
 
