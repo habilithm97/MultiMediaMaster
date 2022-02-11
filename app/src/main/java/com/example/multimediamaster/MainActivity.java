@@ -38,6 +38,15 @@ public class MainActivity extends AppCompatActivity implements AutoPermissionsLi
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        Button btn4 = (Button)findViewById(R.id.btn4);
+        btn4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), VideoActivity.class);
+                startActivity(intent);
+            }
+        });
+
         Button btn3 = (Button)findViewById(R.id.btn3);
         btn3.setOnClickListener(new View.OnClickListener() {
             @Override
