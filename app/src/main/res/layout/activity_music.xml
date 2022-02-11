@@ -8,24 +8,33 @@
         android:id="@+id/btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="사진 촬영" />
+        android:text="재생" />
 
     <Button
         android:id="@+id/btn2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="카메라 미리보기 액티비티로 이동하기" />
+        android:text="중지" />
 
     <Button
         android:id="@+id/btn3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="음악 파일 재생 액티비티로 이동하기" />
+        android:text="일시 정지" />
 
-    <ImageView
-        android:id="@+id/img"
+    <Button
+        android:id="@+id/btn4"
         android:layout_width="match_parent"
-        android:layout_height="504dp"
-        android:background="@drawable/image"/>
+        android:layout_height="wrap_content"
+        android:text="재시작" />
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/purple_200"
+        android:textSize="50sp"
+        android:text="Flower Dance"
+        android:gravity="center"/>
 
 </LinearLayout>
