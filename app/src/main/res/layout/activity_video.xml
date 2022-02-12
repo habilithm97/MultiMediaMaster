@@ -8,10 +8,10 @@
         android:id="@+id/btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="유튜브 영상 재생하기" />
+        android:text="동영상 재생" />
 
-    <com.google.android.youtube.player.YouTubePlayerView
-        android:id="@+id/playerView"
+    <VideoView
+        android:id="@+id/videoView"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 

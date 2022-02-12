@@ -28,6 +28,12 @@
         android:layout_height="wrap_content"
         android:text="동영상 재생 액티비티로 이동하기" />
 
+    <Button
+        android:id="@+id/btn5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="유튜브 재생 액티비티로 이동하기" />
+
 
     <ImageView
         android:id="@+id/img"

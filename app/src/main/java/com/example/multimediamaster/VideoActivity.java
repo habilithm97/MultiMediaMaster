@@ -18,7 +18,7 @@ public class VideoActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_you_tube);
+        setContentView(R.layout.activity_video);
 
         videoView = (VideoView)findViewById(R.id.videoView);
 
@@ -33,6 +33,6 @@ public class VideoActivity extends AppCompatActivity {
                 videoView.requestFocus(); // 파일 정보의 일부를 가져옴
                 videoView.start(); // 영상 재생
             }
-       });
+        });
     }
 }

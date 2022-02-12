@@ -38,6 +38,15 @@ public class MainActivity extends AppCompatActivity implements AutoPermissionsLi
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        Button btn5 = (Button)findViewById(R.id.btn5);
+        btn5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), YouTubeActivity.class);
+                startActivity(intent);
+            }
+        });
+
         Button btn4 = (Button)findViewById(R.id.btn4);
         btn4.setOnClickListener(new View.OnClickListener() {
             @Override
